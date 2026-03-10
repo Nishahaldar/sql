@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn SQL - Beginner to Advanced</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#f4f6f8;
+}
+
+header{
+background:#1e293b;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+nav{
+background:#334155;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+.container{
+padding:30px;
+max-width:1000px;
+margin:auto;
+}
+
+.card{
+background:white;
+padding:20px;
+margin-bottom:25px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+h2{
+color:#1e293b;
+}
+
+code{
+background:#111827;
+color:#22c55e;
+padding:10px;
+display:block;
+border-radius:6px;
+margin-top:10px;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#1e293b;
+color:white;
+margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🚀 Learn SQL</h1>
+<p>Beginner to Advanced SQL Tutorial</p>
+</header>
+
+<nav>
+<a href="#intro">Introduction</a>
+<a href="#select">SELECT</a>
+<a href="#where">WHERE</a>
+<a href="#join">JOIN</a>
+<a href="#group">GROUP BY</a>
+</nav>
+
+<div class="container">
+
+<div class="card" id="intro">
+<h2>1. What is SQL?</h2>
+
+<p>
+SQL (Structured Query Language) is used to communicate with databases.
+It allows you to store, retrieve, update and delete data.
+</p>
+
+<p>SQL is used in databases like:</p>
+
+<ul>
+<li>MySQL</li>
+<li>PostgreSQL</li>
+<li>SQL Server</li>
+<li>Oracle</li>
+</ul>
+
+</div>
+
+<div class="card" id="select">
+
+<h2>2. SELECT Statement</h2>
+
+<p>The SELECT statement is used to retrieve data from a database.</p>
+
+<code>
+SELECT * FROM employees;
+</code>
+
+<p>Select specific columns:</p>
+
+<code>
+SELECT name, salary FROM employees;
+</code>
+
+</div>
+
+<div class="card" id="where">
+
+<h2>3. WHERE Clause</h2>
+
+<p>WHERE filters records.</p>
+
+<code>
+SELECT * FROM employees
+WHERE salary > 50000;
+</code>
+
+<p>Multiple conditions:</p>
+
+<code>
+SELECT * FROM employees
+WHERE department = 'IT'
+AND salary > 60000;
+</code>
+
+</div>
+
+<div class="card" id="join">
+
+<h2>4. JOIN</h2>
+
+<p>JOIN combines rows from multiple tables.</p>
+
+<code>
+SELECT employees.name, departments.department_name
+FROM employees
+JOIN departments
+ON employees.department_id = departments.id;
+</code>
+
+</div>
+
+<div class="card" id="group">
+
+<h2>5. GROUP BY</h2>
+
+<p>GROUP BY groups rows with the same values.</p>
+
+<code>
+SELECT department, COUNT(*)
+FROM employees
+GROUP BY department;
+</code>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>Made by Shubh | Learn SQL Website</p>
+
+</footer>
+
+</body>
+</html>
